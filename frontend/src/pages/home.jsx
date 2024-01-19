@@ -1,7 +1,6 @@
 import React from "react";
-import Featured from "./featured";
-import MovieList from "./movieList";
-import requests from "../services/api";
+import Featured from "../components/featured";
+import MovieList from "../components/movieList";
 
 const Home = () => {
   return (

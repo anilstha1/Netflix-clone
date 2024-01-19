@@ -16,4 +16,11 @@ const getMovieDetails = async (id) => {
   return res.data;
 };
 
-export {getMovies, getMovieDetails};
+const getRecommendations = async (id) => {
+  const res = await axios.get(
+    `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${key}&language=en-US&page=1`
+  );
+  return res.data.results;
+};
+
+export {getMovies, getMovieDetails, getRecommendations};

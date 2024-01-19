@@ -3,6 +3,7 @@ import logo from "../assets/netflix-logo.png";
 import profile from "../assets/default-profile.png";
 import {BsChevronDown, BsBell} from "react-icons/bs";
 import {FaSearch} from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 const TOP_OFFSET = 66;
 
@@ -33,10 +34,10 @@ function Navbar() {
     >
       <img src={logo} alt="Netflix" className="h-20" />
       <div className="hidden lg:flex flex-row gap-2">
-        <div className="hover:underline">Home</div>
-        <div className="hover:underline">Series</div>
-        <div className="hover:underline">Movies</div>
-        <div className="hover:underline">My list</div>
+        <Link to={"/"}>Home</Link>
+        <Link to={"/"}>Movies</Link>
+        <Link to={"/series"}>Series</Link>
+        <Link to={"/myList"}>My list</Link>
       </div>
 
       <div
@@ -52,6 +53,15 @@ function Navbar() {
             <div className="flex flex-col gap-2">
               <div className="px-3 text-white text-center hover:underline">
                 Home
+              </div>
+              <div className="px-3 text-white text-center hover:underline">
+                Movies
+              </div>
+              <div className="px-3 text-white text-center hover:underline">
+                Series
+              </div>
+              <div className="px-3 text-white text-center hover:underline">
+                My List
               </div>
             </div>
           </div>
